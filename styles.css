@@ -1,432 +1,230 @@
-<<<<<<< HEAD
-/* Estilos generales */
+/* General */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f5;
-    color: #333;
 }
 
-header {
-    background-color: #282828;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-}
-
-nav a:hover,
-nav a.active {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-/* Estilos para la página de productos */
-#catalogo-productos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.producto {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    width: 250px;
-    margin: 20px;
-}
-
-.producto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.producto h3 {
-    font-size: 1.5em;
-    margin: 15px 0;
-}
-
-.producto .precio {
+h1, h3 {
     font-weight: bold;
-    font-size: 1.2em;
-    color: #27ae60;
+    text-align: center;
+}
+
+h3 {
     margin-bottom: 10px;
 }
 
-.btn-agregar {
-    background-color: #27ae60;
+/* Encabezado */
+header {
+    background-color: #343a40;
     color: white;
-    padding: 10px 15px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Logo principal */
+.logo-img {
+    width: 250px; 
+    height: auto; 
+    max-width: none; 
+}
+
+/* Navbar */
+.navbar {
+    font-size: large;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: larger;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #17a2b8;
+}
+
+.navbar-brand{
+    font-size: larger; 
+}
+
+/* Banner de promoción  */
+
+.banner-promocion {
+    background-color: #003366; 
+    color: white; 
+    padding: 40px 20px; 
+    margin: 50px 0; 
+    border-radius: 8px; 
+}
+
+.banner-title {
+    font-size: 2.2rem; 
+    font-weight: bold;
+}
+
+.banner-text {
+    font-size: 1.25rem; 
+}
+
+
+/* Productos */
+#catalogo-productos {
+    margin-top: 30px;
+}
+
+#catalogo-productos img {
+    max-width: 100%;
+    height: auto;
+}
+
+#catalogo-productos .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#catalogo-productos .card:hover {
+    transform: translateY(-10px);
+}
+
+#catalogo-productos h5 {
+    font-size: larger;
+}
+
+#catalogo-productos .precio {
+    color: #28a745;
+    font-size: larger;
+    margin: 15px 0;
+}
+
+.btn-agregar {
+    background-color: #28a745;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    color: white;
+    font-size: medium;
 }
 
 .btn-agregar:hover {
-    background-color: #2ecc71;
+    background-color: #218838;
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* Carrito */
+#mi-carrito {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
 }
 
-/* Estilos para la página de contacto */
-#contacto form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+#mi-carrito h2 {
+    text-decoration: underline;
+    font-size: xx-large;
+    margin: 10px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-#contacto label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contacto input,
-#contacto textarea {
+#mi-carrito li {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-bottom: 1px solid #dee2e6;
 }
 
-#contacto textarea {
-    resize: none;
-}
-
-.btn-enviar {
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.btn-enviar:hover {
-    background-color: #2ecc71;
-}
-
-/* Estilos para la página de mi carrito */
-#mi-carrito ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mi-carrito ul li {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-#mi-carrito ul li strong {
-    color: #27ae60;
-}
-
-#mi-carrito p {
-    font-size: 1.5em;
+.mi-carrito-p {
+    font-size: larger;
+    text-align: right;
     font-weight: bold;
 }
 
-.btn-comprar {
-    background-color: #27ae60;
+.mi-carrito-btn {
+    margin-bottom: 20px;
+}
+
+.mi-carrito-btn button {
+    background-color: #28a745; 
     color: white;
-    padding: 10px 20px;
+    font-size: larger;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-comprar:hover {
-    background-color: #2ecc71;
+.mi-carrito-btn button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
 }
 
-/* Estilos del pie de página */
+/* Paginación */
+.pagination .page-link {
+    color: #17a2b8;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+}
+
+/* Contacto */
+#contacto h2 {
+text-decoration: underline;
+font-size: xx-large;
+font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Footer */
 footer {
-    background-color: #282828;
-    color: #fff;
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 footer p {
     margin: 5px 0;
 }
 
-/* Media Queries para responsive design */
-@media (max-width: 768px) {
-    #catalogo-productos {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .producto {
-        width: 90%;
-        margin: 10px 0;
-    }
-=======
-/* Estilos generales */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f5;
-    color: #333;
-}
-
-header {
-    background-color: #282828;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-}
-
-nav a:hover,
-nav a.active {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-/* Estilos para la página de productos */
-#catalogo-productos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.producto {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    width: 250px;
-    margin: 20px;
-}
-
-.producto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.producto h3 {
-    font-size: 1.5em;
-    margin: 15px 0;
-}
-
-.producto .precio {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #27ae60;
-    margin-bottom: 10px;
-}
-
-.btn-agregar {
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-agregar:hover {
-    background-color: #2ecc71;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* Estilos para la página de contacto */
-#contacto form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-#contacto label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contacto input,
-#contacto textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-#contacto textarea {
-    resize: none;
-}
-
-.btn-enviar {
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.btn-enviar:hover {
-    background-color: #2ecc71;
-}
-
-/* Estilos para la página de mi carrito */
-#mi-carrito ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mi-carrito ul li {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-#mi-carrito ul li strong {
-    color: #27ae60;
-}
-
-#mi-carrito p {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.btn-comprar {
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
+/* Estilos para mostrar los menús al pasar el cursor */
+.navbar-nav .dropdown:hover > .dropdown-menu {
     display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
+    margin-top: 0;
 }
 
-.btn-comprar:hover {
-    background-color: #2ecc71;
-}
-
-/* Estilos del pie de página */
-footer {
-    background-color: #282828;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+.dropdown-submenu {
     position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-footer p {
-    margin: 5px 0;
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
 }
 
-/* Media Queries para responsive design */
-@media (max-width: 768px) {
-    #catalogo-productos {
-        flex-direction: column;
-        align-items: center;
-    }
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    display: none;
+    position: absolute;
+}
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+/* ubicación */
+.ubicación {
+    height: 300px;
+    width: 50%;
+    margin: 20px auto; 
+    border: 2px solid #343A40; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+}
 
-    .producto {
-        width: 90%;
-        margin: 10px 0;
+#map-title{
+    text-decoration: underline;
+    font-size: xx-large;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Despliegue hacia abajo en mobile de la barra de navegacion */ 
+@media (max-width: 992px) {
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
     }
->>>>>>> b3fbbce927fa77e89fe2996436d98d1157ae4d5b
 }
